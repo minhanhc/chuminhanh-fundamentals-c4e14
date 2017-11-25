@@ -1,0 +1,11 @@
+1. Boolean is a conditional expression
+examples: x=1, x+1==2
+  x+y=z, x+z=y, y==z
+  6//4==2
+3. nested conditionals are conditionals whose branches can contain another conditional or "if" statement
+examples:
+  if x > 0:
+    if x % 2 ==1:
+      print("x is an odd number")
+    else:
+      print("x is an even number")
