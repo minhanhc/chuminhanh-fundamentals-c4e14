@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PUBG Admin</title>
+  </head>
+  <body>
+    <h1>Admin</h1>
+    <table border = "2px">
+      <thead>
+        <th>Tên TK</th>
+        <th>Thời gian thuê</th>
+        <th>Tình trạng</th>
+        <th>Thao tác</th>
+      </thead>
+      <tbody>
+        {% for item in items %}
+        <tr>
+          <td>{{ item.name}}</td>
+          <td>{{ item.price }}</td>
+          <td>
+          {% if item.rented %}
+            Đã thuê
+          {% else %}
+            Chưa thuê
+          {% endif %}
+          </td>
+          <td>
+            <a href="{{ url_for('delete', item_id = item.id)}}">Xóa?</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

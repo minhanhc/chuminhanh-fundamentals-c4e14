@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {%for item in items %}
+      {%if item_id == item.id %}
+        <p>{{item.name}}</p>
+        <p>{{item.duration}}</p>
+        <p>{{item.rented}}</p>
+      {% endif %}
+    {% endfor %}
+  </body>
+</html>
