@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <h1>Form đăng kí tài khoản cho thuê</h1>
+  <body>
+    <form class="" method="post">
+      <label for="">Tên tài khoản</label>
+      <input type="text" name="name" value="">
+      <br>
+
+      <br>
+      <input type="submit"  value="Đăng kí">
+    </form>
+    {% for message in get_flashed_messages()%}
+      <p>{{ message }}</p>
+    {% endfor %}
+  </body>
+</html>
